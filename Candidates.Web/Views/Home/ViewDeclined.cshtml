@@ -1,0 +1,38 @@
+﻿@using Candidates.Data;
+@model List<Candidate>
+
+<style>
+    th {
+        text-align: center;
+    }
+    .toggle{
+        margin-bottom:20px;
+    }
+</style>
+
+<button class="toggle btn btn-info">Show/Hide Notes</button>
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Notes</th>
+        <th>View Details</th>
+        <th class="notes">Notes</th>
+    </tr>
+
+    @foreach (Candidate c in Model)
+    {
+        <tr>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Notes</td>
+            <td><a href="/home/viewCandidate?id=@c.Id" class="btn btn-info btn-block">View Details</a></td>
+            <td class="notes">@c.Notes</td>
+        </tr>
+    }
+</table>
+
+@section scripts{ 
+<script src="~/js/Index.js"></script>
+}
+

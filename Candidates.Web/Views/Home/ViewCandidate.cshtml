@@ -1,0 +1,30 @@
+﻿@using Candidates.Data;
+@model Candidate
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <h4>First Name</h4>
+        <p>@Model.FirstName</p>
+
+        <h4>Last Name</h4>
+        <p>@Model.LastName</p>
+
+        <h4>Phone Number</h4>
+        <p>@Model.PhoneNumber</p>
+
+
+        <h4>Email</h4>
+        <p>@Model.Email</p>
+        
+        <h4>Notes</h4>
+        <p>@Model.Notes</p>
+        <button id="confirm" data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")> Confirm</button>
+        <button id="decline"data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")>Decline</button>
+
+    </div>
+</div>
+
+@section Scripts{ 
+<script src="~/js/Index.js"></script>
+}
+

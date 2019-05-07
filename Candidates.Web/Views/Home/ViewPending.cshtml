@@ -1,0 +1,27 @@
+﻿@using Candidates.Data;
+@model List<Candidate>
+
+<style>
+    th {
+        text-align: center;
+    }
+</style>
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Notes</th>
+        <th>View Details</th>
+    </tr>
+
+    @foreach (Candidate c in Model)
+    {
+        <tr>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Notes</td>
+            <td><a href="/home/viewCandidate?id=@c.Id" class="btn btn-info btn-block">View Details</a></td>
+        </tr>
+    }
+</table>
+
