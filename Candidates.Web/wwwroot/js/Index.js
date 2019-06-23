@@ -4,7 +4,6 @@
         var Confirmed = true;
 
         if ($(this).attr("id") == 'decline') {
-            alert('declined');
             Confirmed === false;
         };
 
