@@ -5,4 +5,4 @@ When a user is added their status is marked as pending. Their status can then be
 The user can view separate lists of all pending, confirmed or declined candidates. 
 All candidates names are links which redirect the user to that candidates specific information. 
 
-This project uses AJAX, Entity Framework, and a login system. 
+This project uses AJAX, Entity Framework, Viewbag, and a login system. 
