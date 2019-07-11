@@ -37,8 +37,8 @@ namespace Candidates.Web.Controllers
 		public IActionResult AddCandidate(Candidate candidate)
 		{
 			CandidateRepository repository = new CandidateRepository(_connectionString);
-			repository.AddCandidate(candidate);
-			return Redirect("/");
+			int id = repository.AddCandidate(candidate);
+			return Redirect($"/home/viewCandidate?id={id}");
 		}
 
 		public IActionResult ViewPending()

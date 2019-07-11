@@ -18,8 +18,8 @@
         
         <h4>Notes</h4>
         <p>@Model.Notes</p>
-        <button id="confirm" data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")> Confirm</button>
-        <button id="decline"data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")>Decline</button>
+        <button  id="confirm" data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")>Confirm</button>
+        <button id="decline" data-decline="decline" data-id="@Model.Id" class="update-status btn btn-info" style="margin:20px;" @(!Model.Confirmed.HasValue ? "":"disabled")>Decline</button>
 
     </div>
 </div>

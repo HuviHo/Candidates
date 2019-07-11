@@ -31,9 +31,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="ViewPending">Pending (<span id="pending">@ViewBag.Pending</span>)</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="ViewConfirmed">Confirmed(<span id="confirmed">@ViewBag.Confirmed</span>)</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="ViewDeclined">Declined(<span id="declined">@ViewBag.Declined</span>)</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ViewPending">Pending <span id="pending" class="badge">@ViewBag.Pending</span></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ViewConfirmed">Confirmed <span id="confirmed" class="badge">@ViewBag.Confirmed</span></a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ViewDeclined">Declined <span id="declined" class="badge">@ViewBag.Declined</span></a></li>
                 </ul>
             </div>
         </div>

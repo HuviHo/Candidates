@@ -14,13 +14,14 @@ namespace Candidates.Data
 			_connectionString = connectionString;
 		}
 
-		public void AddCandidate(Candidate candidate)
+		public int AddCandidate(Candidate candidate)
 		{
 			using (var context = new CandidatesContext(_connectionString))
 			{
 				context.Candidates.Add(candidate);
 				context.SaveChanges();
 			}
+			return candidate.Id;
 		}
 
 		public List<Candidate> GetPending()
